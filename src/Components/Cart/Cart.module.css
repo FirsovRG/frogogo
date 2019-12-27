@@ -5,6 +5,11 @@
 	font-size: 0.875rem;
 	font-weight: 600;
 	cursor: pointer;
+	transition: 0.2s;
+}
+
+.cartContainer:hover {
+	color: #4ad9bd;
 }
 
 .cartIcon {

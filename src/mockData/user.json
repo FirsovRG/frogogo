@@ -1,0 +1,11 @@
+{
+	"id": "mockUserId1",
+	"firstName": "Роман",
+	"lastName": "Фирсов",
+	"personalAccount": {
+		"availableDiscount": 1000
+	},
+	"cart": {
+		"items": []
+	}
+}

@@ -1,11 +1,13 @@
 @font-face {
 	font-family: 'Open Sans';
-	src: url('./Assets/fonts/OpenSans/OpenSans-Regular.ttf');
+	src: url('./assets/fonts/OpenSans/OpenSans-Regular.ttf');
 }
 
 body {
 	margin: 0;
-	font-family: 'Open Sans', 'Roboto';
+	font-family: 'Open Sans', Roboto, 'Helvetica Neue',
+		Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+		'Noto Color Emoji';
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }

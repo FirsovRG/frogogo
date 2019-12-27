@@ -1,7 +1,7 @@
 import React from 'react';
-import cartSvg from '../../Assets/svg/icon-cart-header.svg';
-import cartBablSvg from '../../Assets/svg/icon-cart-babl-header.svg';
-import styles from './Cart.module.css';
+import cartSvg from '../../assets/svg/icon-cart-header.svg';
+import cartBablSvg from '../../assets/svg/icon-cart-babl-header.svg';
+import styles from './cart.module.css';
 
 export const Cart = () => {
 	return (
