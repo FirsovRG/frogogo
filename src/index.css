@@ -19,3 +19,9 @@ html {
 	line-height: 1.15;
 	letter-spacing: 0.05rem;
 }
+
+header,
+footer {
+	background-color: #f9fafb;
+	color: #8a93a3;
+}

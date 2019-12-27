@@ -5,6 +5,7 @@ import goldStatusSvg from '../../Assets/svg/icon-gold-header.svg';
 import logoSvg from '../../Assets/svg/logo-frogogo-header.svg';
 import { Navigation } from '../Navigation/';
 import { NavLink } from 'react-router-dom';
+import { Cart } from '../Cart';
 
 export const Header = () => {
 	return (
@@ -25,6 +26,7 @@ export const Header = () => {
 					<img src={logoSvg} alt='logo' />
 				</div>
 				<Navigation />
+				<Cart />
 			</div>
 		</header>
 	);

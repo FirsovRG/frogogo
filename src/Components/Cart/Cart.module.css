@@ -1,0 +1,22 @@
+.cartContainer {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	font-size: 0.875rem;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.cartIcon {
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 33px;
+	height: 35px;
+}
+
+.cartBabl {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
