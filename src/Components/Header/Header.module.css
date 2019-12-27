@@ -1,0 +1,51 @@
+header {
+	height: 80px;
+	width: 100%;
+    background-color: #f9fafb;
+    padding: 25px 100px;
+}
+
+.headerTopControls {
+	display: flex;
+}
+
+.headerTopControls a {
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+	font-size: 0.875rem;
+    font-weight: 600;
+	margin-right: 30px;
+	letter-spacing: .06rem;
+}
+.headerTopControls a img {
+    margin-right: 5px;
+    height: .7rem;
+}
+
+.addPromocod {
+	color: #ff8282;
+}
+
+.goldStatus {
+	color: #ffa000;
+}
+
+.account {
+	display: flex;
+	color: #8a93a3;
+	font-size: 0.875rem;
+	font-weight: 600;
+	margin-left: auto;
+}
+
+.amount {
+	color: #4ad9bd;
+	margin-left: 10px;
+	font-size: 1rem;
+}
+
+.mainContent {
+    display: flex;
+    margin-top: 20px;
+}

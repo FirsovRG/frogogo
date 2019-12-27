@@ -1,0 +1,15 @@
+.navigation {
+	display: flex;
+	margin-left: 40px;
+}
+
+.navigationLink {
+	display: inline;
+	margin: 0 15px;
+}
+
+.navigationLink a {
+	text-decoration: none;
+	color: #8a93a3;
+	font-weight: 600;
+}
