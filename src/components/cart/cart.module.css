@@ -1,0 +1,24 @@
+.cartLayout {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.cartContainer {
+    width: 700px;
+}
+
+.cartTitle {
+    padding: 25px 0;
+    font-size: 1.7rem;
+    font-weight: 600;
+    border-bottom: 1px solid #eaeaee;
+    letter-spacing: .09rem;
+}
+
+.clearCartButton {
+    color: #ff8282;
+    font-size: 1rem;
+    margin-left: 15px;
+    cursor: pointer;
+}

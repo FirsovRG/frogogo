@@ -1,11 +1,49 @@
 {
-	"id": "mockUserId1",
-	"firstName": "Роман",
-	"lastName": "Фирсов",
-	"personalAccount": {
-		"availableDiscount": 1000
-	},
-	"cart": {
-		"items": []
-	}
+    "id": "mockUserId1",
+    "firstName": "Роман",
+    "lastName": "Фирсов",
+    "personalAccount": {
+        "availableDiscount": 1000
+    },
+    "cart": {
+        "items": [
+            {
+                "id": "mockItemId1",
+                "title": "Стакан",
+                "name": "YPSILON BRIO CAPPUCINO 220мл",
+                "left": 2,
+                "price": 599,
+                "image": "img-product-cart-01@2x.jpg",
+                "specifications": {
+                    "key": "Цвет",
+                    "value": "#d4f756",
+                    "name": "color"
+                },
+                "amount": 1
+            },
+            {
+                "id": "mockItemId2",
+                "title": "Одеяло",
+                "name": "Woolfiled Sunrise",
+                "left": 79,
+                "price": 1725,
+                "specifications": {
+                    "key": "Размер",
+                    "value": "170x200",
+                    "name": "size"
+                },
+                "image": "img-product-cart-02@2x.jpg",
+                "amount": 1
+            },
+            {
+                "id": "mockItemId3",
+                "title": "Беспроводная колонка",
+                "name": "Goodyear Bluetooth Speaker",
+                "left": 65,
+                "price": 2699,
+                "image": "img-product-cart-05@2x.jpg",
+                "amount": 1
+            }
+        ]
+    }
 }

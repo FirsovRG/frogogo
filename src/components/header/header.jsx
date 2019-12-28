@@ -4,7 +4,7 @@ import addPromocodSvg from '../../assets/svg/icon-addpromocod-header.svg';
 import goldStatusSvg from '../../assets/svg/icon-gold-header.svg';
 import arrowDownSvg from '../../assets/svg/icon-header-arr-down.svg';
 import logoSvg from '../../assets/svg/logo-frogogo-header.svg';
-import { Navigation } from '../navigation';
+import { Navigation } from './navigation';
 import { NavLink } from 'react-router-dom';
 import { Cart } from './cart-header';
 import { useSelector } from 'react-redux';

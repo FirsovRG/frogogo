@@ -4,17 +4,19 @@ import { Header } from './components/header/header';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './redux';
+import { Cart } from './components/cart/cart';
 
 function App() {
-	return (
-		<Provider store={store}>
-			<BrowserRouter>
-				<Layout>
-					<Header />
-				</Layout>
-			</BrowserRouter>
-		</Provider>
-	);
+    return (
+        <Provider store={store}>
+            <BrowserRouter>
+                <Layout>
+                    <Header />
+                    <Cart />
+                </Layout>
+            </BrowserRouter>
+        </Provider>
+    );
 }
 
 export default App;

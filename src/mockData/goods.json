@@ -1,0 +1,43 @@
+{
+    "items": [
+        {
+            "title": "Стакан",
+            "name": "YPSILON BRIO CAPPUCINO 220мл",
+            "left": 2,
+            "price": 599
+        },
+        {
+            "title": "Одеяло",
+            "name": "Woolfiled Sunrise",
+            "left": 79,
+            "price": 1725,
+            "specifications": {
+                "size": "170x200"
+            }
+        },
+        {
+            "title": "Беспроводная колонка",
+            "name": "Goodyear Bluetooth Speaker",
+            "left": 65,
+            "price": 2699
+        },
+        {
+            "title": "Складная каркасная термосумка",
+            "name": "SwissOak",
+            "left": 110,
+            "price": 799
+        },
+        {
+            "title": "Плащ-дождевик",
+            "name": "SwissOak",
+            "left": 54,
+            "price": 799
+        },
+        {
+            "title": "Сумка универсальная женская",
+            "name": "SwissOak",
+            "left": 22,
+            "price": 3499
+        }
+    ]
+}

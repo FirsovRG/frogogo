@@ -1,6 +1,6 @@
 import React from 'react';
-import cartSvg from '../../assets/svg/icon-cart-header.svg';
-import cartBablSvg from '../../assets/svg/icon-cart-babl-header.svg';
+import cartSvg from '../../../assets/svg/icon-cart-header.svg';
+import cartBablSvg from '../../../assets/svg/icon-cart-babl-header.svg';
 import styles from './cart-header.module.css';
 
 export const Cart = () => {
