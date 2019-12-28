@@ -6,7 +6,7 @@ import arrowDownSvg from '../../assets/svg/icon-header-arr-down.svg';
 import logoSvg from '../../assets/svg/logo-frogogo-header.svg';
 import { Navigation } from '../navigation';
 import { NavLink } from 'react-router-dom';
-import { Cart } from '../cart';
+import { Cart } from './cart-header';
 import { useSelector } from 'react-redux';
 
 export const Header = () => {
