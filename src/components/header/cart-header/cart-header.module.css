@@ -1,27 +1,44 @@
 .cartContainer {
-	margin-left: auto;
-	display: flex;
-	align-items: center;
-	font-size: 0.875rem;
-	font-weight: 600;
-	cursor: pointer;
-	transition: 0.2s;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .cartContainer:hover {
-	color: #4ad9bd;
+    color: #4ad9bd;
 }
 
 .cartIcon {
-	display: flex;
-	align-items: center;
-	position: relative;
-	width: 33px;
-	height: 35px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 33px;
+    height: 35px;
 }
 
 .cartBabl {
-	position: absolute;
-	right: 0;
-	top: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url('../../../assets/svg/icon-cart-babl-header.svg');
+    height: 15px;
+    width: 18px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+	font-size: 0.8rem;
+	align-items: center;
+}
+
+:root {
+	--products-amount: '3'
+}
+
+div.cartBabl::before {
+	counter-reset: x var(--products-amount);
+    content: counter(x);
 }

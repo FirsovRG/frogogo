@@ -44,6 +44,8 @@
                 "image": "img-product-cart-05@2x.jpg",
                 "amount": 1
             }
-        ]
+        ],
+        "amount": 3,
+        "sum": 5023
     }
 }

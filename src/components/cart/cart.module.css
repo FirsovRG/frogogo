@@ -11,7 +11,6 @@
 .cartTitle {
     padding: 25px 0;
     font-size: 1.7rem;
-    font-weight: 600;
     border-bottom: 1px solid #eaeaee;
     letter-spacing: .09rem;
 }
@@ -21,4 +20,17 @@
     font-size: 1rem;
     margin-left: 15px;
     cursor: pointer;
+}
+
+.cartList {
+    margin-bottom: 50px;
+}
+
+.cartListSum {
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemsCost {
+    font-size: 1.3rem;
 }

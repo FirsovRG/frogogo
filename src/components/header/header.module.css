@@ -12,7 +12,6 @@ header {
 	align-items: center;
 	text-decoration: none;
 	font-size: 0.875rem;
-	font-weight: 600;
 	margin-right: 30px;
 	letter-spacing: 0.06rem;
 }
@@ -34,7 +33,6 @@ header {
 	align-items: flex-end;
 	color: #8a93a3;
 	font-size: 0.875rem;
-	font-weight: 600;
 	margin-left: auto;
 }
 
