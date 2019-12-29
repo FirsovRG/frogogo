@@ -8,6 +8,7 @@ import {
     removeProductFromCart,
     clearCart
 } from '../../redux/actions/user';
+import { DiscountSlider } from './discount-slider';
 
 export const Cart = () => {
     const { items, amount, sum } = useSelector(state => state.userReducer.cart);
@@ -26,15 +27,18 @@ export const Cart = () => {
         dispatch(removeProductFromCart(item));
     };
     const clearUserCart = () => {
-        dispatch(clearCart())
-    }
+        dispatch(clearCart());
+    };
 
     return (
         <div className={styles.cartLayout}>
             <div className={styles.cartContainer}>
                 <div className={styles.cartTitle}>
                     Вот что в вашей корзине{' '}
-                    <span className={styles.clearCartButton} onClick={clearUserCart}>
+                    <span
+                        className={styles.clearCartButton}
+                        onClick={clearUserCart}
+                    >
                         Очистить корзину
                     </span>
                 </div>
@@ -55,6 +59,7 @@ export const Cart = () => {
                         {sum.toLocaleString()} &#8381;
                     </span>
                 </div>
+                <DiscountSlider />
             </div>
         </div>
     );
