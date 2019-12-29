@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import styles from './cart.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { CartListItem } from './cart-list-item';
@@ -6,35 +6,72 @@ import {
     increaseProductCount,
     decreaseProductCount,
     removeProductFromCart,
-    clearCart
+    clearCart,
+    setDiscountValue,
+    setDeliveryValue
 } from '../../redux/actions/user';
 import { DiscountSlider } from './discount-slider';
+import { Delivery } from './delivery';
+import { Payment } from './payment/payment';
 
 export const Cart = () => {
-    const { items, amount, sum } = useSelector(state => state.userReducer.cart);
+    const { items, amount, total, discount, delivery } = useSelector(
+        state => state.userReducer.cart
+    );
+
     const dispatch = useDispatch();
-    const increaseItemCount = item => {
-        if (item.amount < item.left) {
-            dispatch(increaseProductCount(item));
-        }
-    };
-    const decreaseItemCount = item => {
-        if (item.amount > 1) {
-            dispatch(decreaseProductCount(item));
-        }
-    };
-    const deleteItem = item => {
-        dispatch(removeProductFromCart(item));
-    };
-    const clearUserCart = () => {
+
+    const [resultCost, setResultCost] = useState(total);
+
+    useEffect(() => {
+        const value = total - discount;
+        const deliveryValue = value >= 1000 ? 0 : 299;
+
+        setResultCost(value >= 0 ? value : 0);
+        dispatch(setDeliveryValue(deliveryValue));
+    }, [total, discount, delivery, dispatch]);
+
+    const increaseItemCount = useCallback(
+        item => {
+            if (item.amount < item.left) {
+                dispatch(increaseProductCount(item));
+            }
+        },
+        [dispatch]
+    );
+
+    const decreaseItemCount = useCallback(
+        item => {
+            if (item.amount > 1) {
+                dispatch(decreaseProductCount(item));
+            }
+        },
+        [dispatch]
+    );
+
+    const deleteItem = useCallback(
+        item => {
+            dispatch(removeProductFromCart(item));
+        },
+        [dispatch]
+    );
+
+    const clearUserCart = useCallback(() => {
         dispatch(clearCart());
-    };
+    }, [dispatch]);
+
+    const setDiscount = useCallback(
+        value => {
+            dispatch(setDiscountValue(value));
+        },
+        [dispatch]
+    );
 
     return (
         <div className={styles.cartLayout}>
             <div className={styles.cartContainer}>
                 <div className={styles.cartTitle}>
-                    Вот что в вашей корзине{' '}
+                    Вот что в вашей корзине
                     <span
                         className={styles.clearCartButton}
                         onClick={clearUserCart}
@@ -54,12 +91,17 @@ export const Cart = () => {
                     ))}
                 </div>
                 <div className={styles.cartListSum}>
-                    {amount} товара на сумму{' '}
+                    {amount} товара на сумму
                     <span className={styles.itemsCost}>
-                        {sum.toLocaleString()} &#8381;
+                        {total.toLocaleString()} &#8381;
                     </span>
                 </div>
-                <DiscountSlider />
+                <DiscountSlider
+                    discountValue={discount}
+                    setDiscountValue={setDiscount}
+                />
+                <Delivery deliveryValue={delivery} />
+                <Payment costValue={resultCost} />
             </div>
         </div>
     );

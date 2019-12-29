@@ -1,18 +1,13 @@
-.discountBlock {
-    font-size: 0.875rem;
-    font-weight: 500;
-    padding: 40px 0 20px 0;
+.deliveryBlock {
+    display: flex;
+    padding: 25px 0;
     border-bottom: 1px solid #eaeaee;
-}
-
-.discount {
     font-size: 1.1rem;
     font-weight: 600;
     color: #8a93a3;
-    display: flex;
 }
 
-.discountValue {
+.deliveryValue {
     margin-left: auto;
     color: #4ad9bd;
     font-size: 1.3rem;

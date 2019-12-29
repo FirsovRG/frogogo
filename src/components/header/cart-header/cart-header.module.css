@@ -34,10 +34,6 @@
 	align-items: center;
 }
 
-:root {
-	--products-amount: '3'
-}
-
 div.cartBabl::before {
 	counter-reset: x var(--products-amount);
     content: counter(x);

@@ -18,3 +18,13 @@ export const removeProductFromCart = itemId => ({
 export const clearCart = () => ({
     type: ActionTypes.CLEAR_CART
 });
+
+export const setDiscountValue = value => ({
+    type: ActionTypes.SET_DISCOUNT_VALUE,
+    payload: value
+});
+
+export const setDeliveryValue = value => ({
+    type: ActionTypes.SET_DELIVERY_VALUE,
+    payload: value
+});

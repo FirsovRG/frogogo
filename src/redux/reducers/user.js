@@ -19,7 +19,7 @@ export default function(state = initialState, action) {
                             : item
                     ),
                     amount: ++state.cart.amount,
-                    sum: state.cart.sum + action.payload.price
+                    total: state.cart.total + action.payload.price
                 }
             };
         case ActionTypes.DECREASE_PRODUCT_COUNT:
@@ -36,7 +36,7 @@ export default function(state = initialState, action) {
                             : item
                     ),
                     amount: --state.cart.amount,
-                    sum: state.cart.sum - action.payload.price
+                    total: state.cart.total - action.payload.price
                 }
             };
         case ActionTypes.REMOVE_PRODUCT_FROM_CART:
@@ -48,15 +48,31 @@ export default function(state = initialState, action) {
                         item => item.id !== action.payload.id
                     ),
                     amount: state.cart.amount - action.payload.amount,
-                    sum:
-                        state.cart.sum -
+                    total:
+                        state.cart.total -
                         action.payload.amount * action.payload.price
                 }
             };
         case ActionTypes.CLEAR_CART:
             return {
                 ...state,
-                cart: { ...state.cart, items: [], sum: 0, amount: 0 }
+                cart: { ...state.cart, items: [], total: 0, amount: 0 }
+            };
+        case ActionTypes.SET_DISCOUNT_VALUE:
+            return {
+                ...state,
+                cart: {
+                    ...state.cart,
+                    discount: action.payload
+                }
+            };
+        case ActionTypes.SET_DELIVERY_VALUE:
+            return {
+                ...state,
+                cart: {
+                    ...state.cart,
+                    delivery: action.payload
+                }
             };
         default:
             return state;

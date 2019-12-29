@@ -45,7 +45,9 @@
                 "amount": 1
             }
         ],
+        "discount": 0,
         "amount": 3,
-        "sum": 5023
+        "total": 5023,
+        "delivery": 0
     }
 }
