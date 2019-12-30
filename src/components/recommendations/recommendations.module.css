@@ -1,5 +1,6 @@
 .recommendationsBlock {
     margin: auto;
+    margin-top: 40px; 
     display: flex;
     flex-direction: column;
     width: 700px;
@@ -15,14 +16,31 @@
     font-size: 1rem;
     color: #046d9d;
     margin-left: 20px;
+    cursor: pointer;
 }
 
-.carouselBlock {
+.carousel {
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.arrowButton {
+.carouselButton {
     cursor: pointer;
+    padding: 0;
+    display: flex;
+    border: 0;
+}
+
+.carouselSlider {
+    flex-grow: 1;
+}
+
+.carouselSliderTray {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
 }

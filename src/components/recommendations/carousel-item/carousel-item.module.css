@@ -1,0 +1,26 @@
+.carouselItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.itemImage {
+    height: 170px;
+}
+
+.itemPrice {
+    color: #046d9d;
+    font-size: 0.9rem;
+}
+
+.discount {
+    color: #4ad9bd;
+}
+
+.itemTitle {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 10px;
+    text-align: center;
+}
