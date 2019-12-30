@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './payment.module.css';
 import goldStatusSvg from '../../../assets/svg/icon-gold.svg';
+import { texts, symbols } from '../../../constants';
 
 export const Payment = ({ costValue }) => {
     const goldDiscount = Math.floor(costValue * 0.2);
@@ -9,25 +10,25 @@ export const Payment = ({ costValue }) => {
     return (
         <div className={styles.paymentBlock}>
             <div className={styles.resultCost}>
-                Итого к оплате
+                {texts.total_cost}
                 <span className={styles.costValue}>
-                    {costValue.toLocaleString()} &#8381;
+                    {costValue.toLocaleString()} {symbols.rub.unicode}
                 </span>
             </div>
             <div className={styles.goldStatus}>
                 +20% от <img src={goldStatusSvg} alt='gold status' /> GOLD
                 статуса
                 <span className={styles.goldDiscount}>
-                    {goldDiscount.toLocaleString()} &#8381;
+                    {goldDiscount.toLocaleString()} {symbols.rub.unicode}
                 </span>
             </div>
             <div className={styles.accountCashback}>
-                На личный счёт вернется
+                {texts.account_cashback}
                 <span className={styles.accountCashbackValue}>
-                    {accountCashback.toLocaleString()} &#8381;
+                    {accountCashback.toLocaleString()} {symbols.rub.unicode}
                 </span>
             </div>
-            <div className={styles.purchaseButton}>Оформить заказ</div>
+            <div className={styles.purchaseButton}>{texts.purchase_button}</div>
         </div>
     );
 };

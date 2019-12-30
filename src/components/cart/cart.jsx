@@ -13,6 +13,7 @@ import {
 import { DiscountSlider } from './discount-slider';
 import { Delivery } from './delivery';
 import { Payment } from './payment/payment';
+import { texts, symbols } from '../../constants';
 
 export const Cart = () => {
     const { items, amount, total, discount, delivery } = useSelector(
@@ -71,12 +72,12 @@ export const Cart = () => {
         <div className={styles.cartLayout}>
             <div className={styles.cartContainer}>
                 <div className={styles.cartTitle}>
-                    Вот что в вашей корзине
+                    {texts.cart_title}
                     <span
                         className={styles.clearCartButton}
                         onClick={clearUserCart}
                     >
-                        Очистить корзину
+                        {texts.clear_cart}
                     </span>
                 </div>
                 <div className={styles.cartList}>
@@ -91,12 +92,13 @@ export const Cart = () => {
                     ))}
                 </div>
                 <div className={styles.cartListSum}>
-                    {amount} товара на сумму
+                    {amount} {texts.product_count}
                     <span className={styles.itemsCost}>
-                        {total.toLocaleString()} &#8381;
+                        {total.toLocaleString()} {symbols.rub.unicode}
                     </span>
                 </div>
                 <DiscountSlider
+                    disabled={!amount}
                     discountValue={discount}
                     setDiscountValue={setDiscount}
                 />

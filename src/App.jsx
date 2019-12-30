@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './redux';
 import { Cart } from './components/cart/cart';
+import { Recommendations } from './components/recommendations';
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <Layout>
                     <Header />
                     <Cart />
+                    <Recommendations />
                 </Layout>
             </BrowserRouter>
         </Provider>

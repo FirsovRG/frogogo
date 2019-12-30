@@ -1,6 +1,7 @@
 import React from 'react';
 import cartSvg from '../../../assets/svg/icon-cart-header.svg';
 import styles from './cart-header.module.css';
+import { navigationRoutes } from '../../../constants';
 
 export const CartHeader = ({ amount }) => {
     return (
@@ -14,7 +15,7 @@ export const CartHeader = ({ amount }) => {
                     />
                 )}
             </div>
-            Корзина
+            {navigationRoutes.cart}
         </div>
     );
 };

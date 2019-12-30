@@ -8,6 +8,7 @@ import { Navigation } from './navigation';
 import { NavLink } from 'react-router-dom';
 import { CartHeader } from './cart-header';
 import { useSelector } from 'react-redux';
+import { texts, symbols } from '../../constants';
 
 export const Header = () => {
     const {
@@ -20,16 +21,18 @@ export const Header = () => {
         <header>
             <div className={styles.headerTopControls}>
                 <NavLink to='' className={styles.addPromocod}>
-                    <img src={addPromocodSvg} alt='add promocod' /> Ввести
-                    промокод
+                    <img src={addPromocodSvg} alt='add promocod' />
+                    {texts.enter_promocode}
                 </NavLink>
                 <NavLink to='' className={styles.goldStatus}>
-                    <img src={goldStatusSvg} alt='gold status' /> GOLD статус
+                    <img src={goldStatusSvg} alt='gold status' />
+                    {texts.gold_status}
                 </NavLink>
                 <div className={styles.account}>
-                    {firstName}, ваш счёт{' '}
+                    {firstName}
+                    {texts.user_account}
                     <span className={styles.amount}>
-                        {availableDiscount.toLocaleString()} &#8381;{' '}
+                        {availableDiscount.toLocaleString()} {symbols.rub.unicode}
                         <img src={arrowDownSvg} alt='arrow down' />
                     </span>
                 </div>

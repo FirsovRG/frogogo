@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './cart-list-item.module.css';
 import { ReactComponent as ColorPick } from '../../../assets/svg/icon-color-product-01.svg';
+import { texts, symbols } from '../../../constants';
 
 const SpecificationsRender = ({ specObj }) => {
     switch (specObj.name) {
@@ -69,21 +70,24 @@ export const CartListItem = ({
                     </div>
                     <div className={styles.remainingItems}>
                         {itemData.left <= 5 && (
-                            <span>Осталось {itemData.left} шт.</span>
+                            <span>
+                                {texts.remains} {itemData.left} шт.
+                            </span>
                         )}
                     </div>
                 </div>
                 <div className={styles.itemPrice}>
                     <div className={styles.priceRow}>
-                        Полная цена
+                        {texts.fullPrice}
                         <span className={styles.fullPrice}>
-                            {itemData.price.toLocaleString()} &#8381;
+                            {itemData.price.toLocaleString() + ' '}
+                            {symbols.rub.unicode}
                         </span>
                     </div>
                     <div className={styles.priceRow}>
-                        Можно оплатить с личного счёта
+                        {texts.available_account_price}
                         <span className={styles.discountPrice}>
-                            {discountPrice} &#8381;
+                            {discountPrice} {symbols.rub.unicode}
                         </span>
                     </div>
                 </div>

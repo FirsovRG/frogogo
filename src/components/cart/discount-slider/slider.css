@@ -10,6 +10,14 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.rc-slider-disabled .rc-slider-track {
+    background-color: #c6ccd6;
+}
+
+.rc-slider-disabled .rc-slider-handle {
+    filter: grayscale(100%);
+}
+
 .rc-slider * {
     box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
