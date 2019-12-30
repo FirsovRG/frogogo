@@ -1,49 +1,57 @@
 header {
-	height: 80px;
-	padding: 25px 100px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+}
+
+.headerContent {
+	width: 76%;
 }
 
 .headerTopControls {
-	display: flex;
+    display: flex;
 }
 
 .headerTopControls a {
-	display: inline-flex;
-	align-items: center;
-	text-decoration: none;
-	font-size: 0.875rem;
-	margin-right: 30px;
-	letter-spacing: 0.06rem;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.875rem;
+    margin-right: 30px;
+    letter-spacing: 0.06rem;
 }
 .headerTopControls a img {
-	margin-right: 5px;
-	height: 0.7rem;
+    margin-right: 5px;
+    height: 0.7rem;
 }
 
 .addPromocod {
-	color: #ff8282;
+    color: #ff8282;
 }
 
 .goldStatus {
-	color: #ffa000;
+    color: #ffa000;
 }
 
 .account {
-	display: flex;
-	align-items: flex-end;
-	color: #8a93a3;
-	font-size: 0.875rem;
-	margin-left: auto;
+    display: flex;
+    align-items: flex-end;
+    color: #8a93a3;
+    font-size: 0.875rem;
+    margin-left: auto;
 }
 
 .amount {
-	color: #4ad9bd;
-	margin-left: 10px;
-	font-size: 1rem;
-	cursor: pointer;
+    color: #4ad9bd;
+    margin-left: 10px;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 .mainContent {
-	display: flex;
+    display: flex;
 	margin-top: 20px;
+	align-items: center;
+    justify-content: space-between;
 }

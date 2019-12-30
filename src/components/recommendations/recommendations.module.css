@@ -1,6 +1,5 @@
 .recommendationsBlock {
-    margin: auto;
-    margin-top: 40px; 
+    margin: 70px auto;
     display: flex;
     flex-direction: column;
     width: 700px;
@@ -31,10 +30,12 @@
     padding: 0;
     display: flex;
     border: 0;
+    outline: none;
 }
 
 .carouselSlider {
     flex-grow: 1;
+    overflow: hidden;
 }
 
 .carouselSliderTray {

@@ -1,6 +1,8 @@
 .navigation {
 	display: flex;
-	margin-left: 40px;
+	margin: 0;
+    padding: 0;
+    margin-top: 5px;
 }
 
 .navigationLink {

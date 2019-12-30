@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { store } from './redux';
 import { Cart } from './components/cart/cart';
 import { Recommendations } from './components/recommendations';
+import { Footer } from './components/footer';
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                     <Header />
                     <Cart />
                     <Recommendations />
+                    <Footer />
                 </Layout>
             </BrowserRouter>
         </Provider>

@@ -19,30 +19,33 @@ export const Header = () => {
 
     return (
         <header>
-            <div className={styles.headerTopControls}>
-                <NavLink to='' className={styles.addPromocod}>
-                    <img src={addPromocodSvg} alt='add promocod' />
-                    {texts.enter_promocode}
-                </NavLink>
-                <NavLink to='' className={styles.goldStatus}>
-                    <img src={goldStatusSvg} alt='gold status' />
-                    {texts.gold_status}
-                </NavLink>
-                <div className={styles.account}>
-                    {firstName}
-                    {texts.user_account}
-                    <span className={styles.amount}>
-                        {availableDiscount.toLocaleString()} {symbols.rub.unicode}
-                        <img src={arrowDownSvg} alt='arrow down' />
-                    </span>
+            <div className={styles.headerContent}>
+                <div className={styles.headerTopControls}>
+                    <NavLink to='' className={styles.addPromocod}>
+                        <img src={addPromocodSvg} alt='add promocod' />
+                        {texts.enter_promocode}
+                    </NavLink>
+                    <NavLink to='' className={styles.goldStatus}>
+                        <img src={goldStatusSvg} alt='gold status' />
+                        {texts.gold_status}
+                    </NavLink>
+                    <div className={styles.account}>
+                        {firstName}
+                        {texts.user_account}
+                        <span className={styles.amount}>
+                            {availableDiscount.toLocaleString()}{' '}
+                            {symbols.rub.unicode}
+                            <img src={arrowDownSvg} alt='arrow down' />
+                        </span>
+                    </div>
                 </div>
-            </div>
-            <div className={styles.mainContent}>
-                <div className={styles.logo}>
-                    <img src={logoSvg} alt='logo' />
+                <div className={styles.mainContent}>
+                    <div className={styles.logo}>
+                        <img src={logoSvg} alt='logo' />
+                    </div>
+                    <Navigation />
+                    <CartHeader amount={amount} />
                 </div>
-                <Navigation />
-                <CartHeader amount={amount} />
             </div>
         </header>
     );
