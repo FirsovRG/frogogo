@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 # Тестовое приложение для Frogogo
 Приложение представляет собой MVP-корзину товаров, с потоком mock-данных и минимальной функциональностью.
 
