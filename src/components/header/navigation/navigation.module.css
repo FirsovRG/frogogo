@@ -2,12 +2,12 @@
 	display: flex;
 	margin: 0;
     padding: 0;
-    margin-top: 5px;
+    margin-top: 0.3125rem;
 }
 
 .navigationLink {
 	display: inline;
-	margin: 0 15px;
+	margin: 0 0.9375rem;
 }
 
 .navigationLink a {

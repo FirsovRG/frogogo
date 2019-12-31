@@ -5,7 +5,7 @@
 }
 
 .itemImage {
-    height: 170px;
+    height: 10.625rem;
 }
 
 .itemPrice {
@@ -21,6 +21,6 @@
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.5;
-    margin-top: 10px;
+    margin-top: 0.625rem;
     text-align: center;
 }

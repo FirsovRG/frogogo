@@ -62,10 +62,18 @@ export const Footer = () => {
                             {contacts.email}
                         </div>
                         <div className={styles.social}>
-                            <img src={fbIconSvg} alt='facebook' />
-                            <img src={instaIconSvg} alt='instagram' />
-                            <img src={vkIconSvg} alt='vk' />
-                            <img src={okIconSvf} alt='ok' />
+                            <a href='' target='_blank'>
+                                <img src={fbIconSvg} alt='facebook' />
+                            </a>
+                            <a href='' target='_blank'>
+                                <img src={instaIconSvg} alt='instagram' />
+                            </a>
+                            <a href='' target='_blank'>
+                                <img src={vkIconSvg} alt='vk' />
+                            </a>
+                            <a href='' target='_blank'>
+                                <img src={okIconSvf} alt='ok' />
+                            </a>
                         </div>
                     </div>
                 </div>

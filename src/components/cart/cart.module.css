@@ -5,11 +5,11 @@
 }
 
 .cartContainer {
-    width: 700px;
+    width: 43.75rem;
 }
 
 .cartTitle {
-    padding: 25px 0;
+    padding: 1.5625rem 0;
     font-size: 1.7rem;
     border-bottom: 1px solid #eaeaee;
     letter-spacing: .09rem;
@@ -18,12 +18,12 @@
 .clearCartButton {
     color: #ff8282;
     font-size: 1rem;
-    margin-left: 15px;
+    margin-left: 0.9375rem;
     cursor: pointer;
 }
 
 .cartList {
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
 }
 
 .cartListSum {

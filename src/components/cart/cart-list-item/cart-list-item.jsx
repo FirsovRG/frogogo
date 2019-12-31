@@ -8,7 +8,7 @@ const SpecificationsRender = ({ specObj }) => {
         case 'color':
             return (
                 <ColorPick
-                    style={{ fill: `${specObj.value}`, marginLeft: '10px' }}
+                    style={{ fill: `${specObj.value}`, marginLeft: '0.625rem' }}
                 />
             );
         case 'size':
