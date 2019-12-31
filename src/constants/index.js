@@ -15,7 +15,7 @@ export const texts = {
     total_cost: 'Итого к оплате',
     account_cashback: 'На личный счёт вернётся',
     purchase_button: 'Оформить заказ',
-    product_count: 'товара на сумму',
+    product_count: 'на сумму',
     recommendations: 'Мы также рекоммендуем',
     show_all: 'Смотреть все',
     payment_methods: 'Способы оплаты',
