@@ -1,12 +1,12 @@
 header {
-	display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 120px;
 }
 
 .headerContent {
-	width: 76%;
+    width: 76%;
 }
 
 .headerTopControls {
@@ -26,7 +26,7 @@ header {
     height: 0.7rem;
 }
 
-.addPromocod {
+.addPromocode {
     color: #ff8282;
 }
 
@@ -51,7 +51,7 @@ header {
 
 .mainContent {
     display: flex;
-	margin-top: 20px;
-	align-items: center;
+    margin-top: 20px;
+    align-items: center;
     justify-content: space-between;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './header.module.css';
-import addPromocodSvg from '../../assets/svg/icon-addpromocod-header.svg';
+import addPromocodeSvg from '../../assets/svg/icon-addpromocod-header.svg';
 import goldStatusSvg from '../../assets/svg/icon-gold-header.svg';
 import arrowDownSvg from '../../assets/svg/icon-header-arr-down.svg';
 import logoSvg from '../../assets/svg/logo-frogogo-header.svg';
@@ -21,8 +21,8 @@ export const Header = () => {
         <header>
             <div className={styles.headerContent}>
                 <div className={styles.headerTopControls}>
-                    <NavLink to='' className={styles.addPromocod}>
-                        <img src={addPromocodSvg} alt='add promocod' />
+                    <NavLink to='' className={styles.addPromocode}>
+                        <img src={addPromocodeSvg} alt='add promocode' />
                         {texts.enter_promocode}
                     </NavLink>
                     <NavLink to='' className={styles.goldStatus}>
