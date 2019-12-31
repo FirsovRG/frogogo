@@ -10,6 +10,7 @@ import fbIconSvg from '../../assets/svg/icon-footer-facebook.svg';
 import instaIconSvg from '../../assets/svg/icon-footer-instagram.svg';
 import vkIconSvg from '../../assets/svg/icon-footer-vk.svg';
 import okIconSvf from '../../assets/svg/icon-footer-ok.svg';
+import { NavLink } from 'react-router-dom';
 
 export const Footer = () => {
     return (
@@ -24,7 +25,9 @@ export const Footer = () => {
                             {Object.keys(footerNavigation[key].links).map(
                                 (link, index) => (
                                     <li key={index}>
-                                        {footerNavigation[key].links[link]}
+                                        <NavLink to=''>
+                                            {footerNavigation[key].links[link]}
+                                        </NavLink>
                                     </li>
                                 )
                             )}

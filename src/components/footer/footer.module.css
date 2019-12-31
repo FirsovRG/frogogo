@@ -20,14 +20,25 @@ footer {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    color: #000;
     font-weight: 500;
     font-size: 0.85rem;
     letter-spacing: normal;
+    color: #000;
 }
 
 .navItemsList > * {
     margin: 12px 0;
+}
+
+.navItemsList a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+}
+
+.navItemsList a:hover {
+    color: #046d9d;
+    cursor: pointer;
 }
 
 .paymentMethods {

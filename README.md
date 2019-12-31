@@ -15,6 +15,7 @@
 + [Redux](https://github.com/reduxjs/redux);
 + [rc-slider](https://github.com/schrodinger/rc-slider);
 + [pure-react-carousel](https://github.com/express-labs/pure-react-carousel#readme);
++ [react-router v4](https://github.com/ReactTraining/react-router);
 
 ## Поток данных
 В приложении используются тестовые данные в виде json-объекта и глобальное хранилище данных для имитации реальной работы приложения.
