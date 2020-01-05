@@ -3,6 +3,7 @@ import styles from './discount-slider.module.css';
 import Slider from 'rc-slider';
 import './slider.css';
 import { texts, symbols } from '../../../constants';
+import { CustomCurrency } from '../../../hoc/custom-currency';
 
 export const DiscountSlider = ({
     discountValue,
@@ -32,7 +33,7 @@ export const DiscountSlider = ({
             <div className={styles.discount}>
                 {texts.used_discount}
                 <span className={styles.discountValue}>
-                    {currentDiscount.toLocaleString()} {symbols.rub.unicode}
+                    <CustomCurrency quantity={currentDiscount} />
                 </span>
             </div>
         </div>

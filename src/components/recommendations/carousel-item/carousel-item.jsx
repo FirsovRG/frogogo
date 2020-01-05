@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './carousel-item.module.css';
-import { symbols } from '../../../constants';
+import { CustomCurrency } from '../../../hoc/custom-currency';
 
 export const CarouselItem = ({ itemData }) => {
     const discount = Math.floor(itemData.price * 0.6);
@@ -15,16 +15,13 @@ export const CarouselItem = ({ itemData }) => {
             />
             <span className={styles.itemPrice}>
                 <span className={styles.price}>
-                    {itemData.price.toLocaleString() +
-                        ` ${symbols.rub.unicode} `}
+                    <CustomCurrency quantity={itemData.price} />
                 </span>
-                -
+                {' - '}
                 <span className={styles.discount}>
-                    {' ' +
-                        discount.toLocaleString() +
-                        ` ${symbols.rub.unicode} `}
+                    <CustomCurrency quantity={discount} />
                 </span>
-                = {result.toLocaleString() + ` ${symbols.rub.unicode}`}
+                {' = '} <CustomCurrency quantity={result} />
             </span>
             <span className={styles.itemTitle}>
                 {itemData.title} {itemData.name}

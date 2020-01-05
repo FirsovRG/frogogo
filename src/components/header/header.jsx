@@ -8,7 +8,8 @@ import { Navigation } from './navigation';
 import { NavLink } from 'react-router-dom';
 import { CartHeader } from './cart-header';
 import { useSelector } from 'react-redux';
-import { texts, symbols } from '../../constants';
+import { texts } from '../../constants';
+import { CustomCurrency } from '../../hoc/custom-currency';
 
 export const Header = () => {
     const {
@@ -33,8 +34,7 @@ export const Header = () => {
                         {firstName}
                         {texts.user_account}
                         <span className={styles.amount}>
-                            {availableDiscount.toLocaleString()}{' '}
-                            {symbols.rub.unicode}
+                            <CustomCurrency quantity={availableDiscount} />
                             <img src={arrowDownSvg} alt='arrow down' />
                         </span>
                     </div>

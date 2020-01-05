@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './cart-list-item.module.css';
 import { ReactComponent as ColorPick } from '../../../assets/svg/icon-color-product-01.svg';
-import { texts, symbols } from '../../../constants';
+import { texts } from '../../../constants';
+import { CustomCurrency } from '../../../hoc/custom-currency';
 
 const SpecificationsRender = ({ specObj }) => {
     switch (specObj.name) {
@@ -30,7 +31,7 @@ export const CartListItem = ({
 
     //Из скриншота не совсем понятно, как высчитывается сумма, которую можно оплатить с личного счёта.
     //Для примера, пусть с Л.С. можно оплатить до 60% стоимости товара
-    const discountPrice = Math.floor(itemData.price * 0.6).toLocaleString();
+    const discountPrice = Math.floor(itemData.price * 0.6);
 
     return (
         <div className={styles.listItem}>
@@ -80,14 +81,13 @@ export const CartListItem = ({
                     <div className={styles.priceRow}>
                         {texts.fullPrice}
                         <span className={styles.fullPrice}>
-                            {itemData.price.toLocaleString() + ' '}
-                            {symbols.rub.unicode}
+                            <CustomCurrency quantity={itemData.price} />
                         </span>
                     </div>
                     <div className={styles.priceRow}>
                         {texts.available_account_price}
                         <span className={styles.discountPrice}>
-                            {discountPrice} {symbols.rub.unicode}
+                            <CustomCurrency quantity={discountPrice} />
                         </span>
                     </div>
                 </div>

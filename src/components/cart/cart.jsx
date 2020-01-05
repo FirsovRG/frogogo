@@ -13,8 +13,9 @@ import {
 import { DiscountSlider } from './discount-slider';
 import { Delivery } from './delivery';
 import { Payment } from './payment/payment';
-import { texts, symbols } from '../../constants';
+import { texts } from '../../constants';
 import { num2str } from '../../utils';
+import { CustomCurrency } from '../../hoc/custom-currency';
 
 export const Cart = () => {
     const { items, amount, total, discount, delivery } = useSelector(
@@ -96,7 +97,7 @@ export const Cart = () => {
                     {num2str(amount, ['товар', 'товара', 'товаров']) + ' '}
                     {texts.product_count}
                     <span className={styles.itemsCost}>
-                        {total.toLocaleString()} {symbols.rub.unicode}
+                        <CustomCurrency quantity={total} />
                     </span>
                 </div>
                 <DiscountSlider
